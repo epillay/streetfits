@@ -1,17 +1,20 @@
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Node.js (TypeScript) API',
+    title: `Streetfits`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    // Add typescript stack into webpack
+    `gatsby-plugin-typescript`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
-        name: 'Gatsby + Node.js (TypeScript) API',
-        short_name: 'Gatsby + Node.js (TypeScript)',
-        start_url: '/',
-        icon: 'src/images/gatsby-icon.png',
+        typekit: {
+          id: process.env.TYPEKIT_ID,
+        },
       },
     },
   ],
-};
+}
