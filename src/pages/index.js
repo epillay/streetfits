@@ -6,7 +6,7 @@ import Img from "gatsby-image";
 import { graphql, Link } from "gatsby";
 
 const MainContainer = styled.div`
-  background-color: pink;
+  background-color: black;
 
   ${device.mobile} {
     background-color: black;
